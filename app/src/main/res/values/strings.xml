@@ -13,4 +13,6 @@
     <string name="hint_correct">Numer poprawnej odpowiedzi (1–4)</string>
     <string name="add_submit">Zatwierdź</string>
     <string name="add_description">W tej zakładce możesz dodać pytanie do bazy danych!</string>
+    <string name="delete">Usuń pytanie z bazy</string>
+    <string name="hint_delete">Tu podaj ID pytania</string>
 </resources>

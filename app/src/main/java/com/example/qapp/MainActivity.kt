@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.btnDelete.setOnClickListener {
+            val intent = Intent( this, DeleteActivity::class.java)
+            startActivity(intent)
+        }
+
         val dbHelper = DataBaseHelper(applicationContext)
         val db = dbHelper.writableDatabase
 

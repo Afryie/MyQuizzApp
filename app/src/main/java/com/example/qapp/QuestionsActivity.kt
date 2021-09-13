@@ -14,7 +14,7 @@ import com.example.qapp.databinding.ActivityQuestionsBinding
 class QuestionsActivity : AppCompatActivity() {
 
 
-
+    private var currentID =1
     private var currentQuestion = 1
     private var poprawna = 0
     private var wybrana = 0
@@ -29,13 +29,15 @@ class QuestionsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityQuestionsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setQuestion()
         countQuestions()
         if(QuestionCounter == 0)
         {
             addBasicQuestions()
             setQuestion()
             countQuestions()
+        }
+        else {
+            setQuestion()
         }
 
         defaultOptionsView()
@@ -73,6 +75,7 @@ class QuestionsActivity : AppCompatActivity() {
             }
             else{
             currentQuestion++
+                currentID++
             if(wybrana==poprawna){ CorrectAnswers++ }
                 wybrana=0
                 if(currentQuestion>=QuestionCounter){binding.zatwierdz.setText("Zakończ Quiz")}
@@ -85,11 +88,24 @@ class QuestionsActivity : AppCompatActivity() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        countQuestions()
+        if(QuestionCounter == 0)
+        {
+            addBasicQuestions()
+            setQuestion()
+            countQuestions()
+        }
+    }
+
+
 
      private fun setQuestion() {
          val dbHelper = DataBaseHelper(applicationContext)
          val db = dbHelper.writableDatabase
-         val cursor = db.query(TableInfo.TABLE_NAME, null, BaseColumns._ID + "=?", arrayOf(currentQuestion.toString()), null, null, null)
+         val cursor = db.query(TableInfo.TABLE_NAME, null, BaseColumns._ID + "=?", arrayOf(currentID.toString()), null, null, null)
+
 
         if (cursor.moveToFirst()) {
 
@@ -99,6 +115,12 @@ class QuestionsActivity : AppCompatActivity() {
             binding.odp3.setText(cursor.getString(4))
             binding.odp4.setText(cursor.getString(5))
             poprawna = cursor.getString(6).toInt()
+
+        }
+         else{
+
+             currentID++
+            setQuestion()
         }
 
     }
@@ -136,7 +158,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     private fun countQuestions(){
 
-        val sql = "SELECT COUNT(*) FROM " + TableInfo.TABLE_NAME
+        val sql = "SELECT COUNT(*) FROM " + TableInfo.TABLE_NAME +" WHERE " +TableInfo.TABLE_QUESTION + " IS NOT NULL"
         val dbHelper = DataBaseHelper(applicationContext)
         val db = dbHelper.writableDatabase
         val cursor2 =  db.rawQuery(sql,null)
