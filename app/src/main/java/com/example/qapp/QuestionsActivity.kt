@@ -75,6 +75,7 @@ class QuestionsActivity : AppCompatActivity() {
             currentQuestion++
             if(wybrana==poprawna){ CorrectAnswers++ }
                 wybrana=0
+                if(currentQuestion>=QuestionCounter){binding.zatwierdz.setText("Zakończ Quiz")}
             setQuestion()
             defaultOptionsView()
             }
