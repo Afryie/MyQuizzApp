@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QApp</string>
+    <string name="welcome">Witaj!</string>
+    <string name="description">To aplikacja w której możesz sprawdzić wiedzę swoją jak i znajomych!</string>
+    <string name="start">Start</string>
+    <string name="add_q">Dodaj pytanie</string>]
+    <string name="foot">By Osar Productions</string>
+    <string name="hint_question">Wpisz pytanie</string>
+    <string name="hint_A1">Odpowiedź 1</string>
+    <string name="hint_A2">Odpowiedź 2</string>
+    <string name="hint_A3">Odpowiedź 3</string>
+    <string name="hint_A4">Odpowiedź 4</string>
+    <string name="hint_correct">Numer poprawnej odpowiedzi (1–4)</string>
+    <string name="add_submit">Zatwierdź</string>
+    <string name="add_description">W tej zakładce możesz dodać pytanie do bazy danych!</string>
+</resources>

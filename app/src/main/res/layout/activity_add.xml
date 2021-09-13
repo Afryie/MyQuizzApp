@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+
+        <TextView
+            android:id="@+id/add_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_description"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="20dp"
+
+
+            />
+
+
+
+
+        <EditText
+            android:id="@+id/add_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:hint="@string/hint_question"
+            android:autofillHints="@string/hint_question"
+            android:textColor="#363A43"
+            android:inputType="textLongMessage"
+            android:textSize="22sp">
+        </EditText>
+
+
+
+        <EditText
+            android:id="@+id/add_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:hint="@string/hint_A1"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            android:inputType="text"
+            tools:text="Odp1">
+        </EditText>
+
+        <EditText
+            android:id="@+id/add_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/hint_A2"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            android:inputType="text"
+            tools:text="Odp2">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/add_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/hint_A3"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            android:inputType="text"
+            tools:text="Odp3">
+        </EditText>
+
+        <EditText
+            android:id="@+id/add_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/hint_A4"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            android:inputType="text"
+            tools:text="Odp4">
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/add_correct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="@string/hint_correct"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="#7A8089"
+            android:textSize="18sp"
+            android:inputType="numberSigned"
+            tools:text="Poprawna">
+        </EditText>
+
+        <Button
+            android:id="@+id/add_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:text="@string/add_submit"
+            android:textStyle="bold">
+
+        </Button>
+
+    </LinearLayout>
+</ScrollView>
