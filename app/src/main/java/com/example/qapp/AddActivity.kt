@@ -31,6 +31,13 @@ class AddActivity : AppCompatActivity() {
 
 
             if(correctData(pytanie,A1,A2,A3,A4,poprawna)) {
+
+
+
+
+
+
+
                 val value = ContentValues()
                 value.put("pytanie", pytanie)
                 value.put("Odp1", A1)
@@ -52,9 +59,7 @@ class AddActivity : AppCompatActivity() {
 
 
             }
-            //else {
-                //Toast.makeText(applicationContext, "Uzupełnij wszystkie pola!",Toast.LENGTH_SHORT).show()
-            //}
+
             }
             }
 

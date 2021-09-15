@@ -14,5 +14,5 @@
     <string name="add_submit">Zatwierdź</string>
     <string name="add_description">W tej zakładce możesz dodać pytanie do bazy danych!</string>
     <string name="delete">Usuń pytanie z bazy</string>
-    <string name="hint_delete">Tu podaj ID pytania</string>
+    <string name="hint_delete">Tu podaj numer(ID) pytania</string>
 </resources>
